@@ -58,3 +58,34 @@
 ### 自定义排序
 - **用途**：允许用户自定义排序规则。
 - **用法**：`sort(container.begin(), container.end(), [](int a, int b) { return condition; });`
+# 集合操作算法
+
+## set_union()
+- **用途**：计算两个集合的并集。
+- **用法**：`set_union(setA.begin(), setA.end(), setB.begin(), setB.end(), inserter(result, result.begin()));`
+
+## set_intersection()
+- **用途**：计算两个集合的交集。
+- **用法**：`set_intersection(setA.begin(), setA.end(), setB.begin(), setB.end(), inserter(result, result.begin()));`
+
+## set_difference()
+- **用途**：计算两个集合的差集。
+- **用法**：`set_difference(setA.begin(), setA.end(), setB.begin(), setB.end(), inserter(result, result.begin()));`
+
+## set_symmetric_difference()
+- **用途**：计算两个集合的对称差集。
+- **用法**：`set_symmetric_difference(setA.begin(), setA.end(), setB.begin(), setB.end(), inserter(result, result.begin()));` // 注意：代码中错误地使用了 set_difference 来演示对称差集。
+
+## includes()
+- **用途**：判断一个集合是否是另一个集合的子集。
+- **用法**：`bool result = includes(setA.begin(), setA.end(), setB.begin(), setB.end());`
+
+## 序列操作算法
+
+## merge()
+- **用途**：合并两个有序序列，结果依然是有序的。
+- **用法**：`merge(setA.begin(), setA.end(), setB.begin(), setB.end(), back_inserter(result));`
+
+## unique()
+- **用途**：移除序列中的连续重复元素。
+- **用法**：`auto last = unique(v1.begin(), v1.end()); v1.erase(last, v1.end());
