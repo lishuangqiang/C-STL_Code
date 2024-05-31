@@ -37,3 +37,24 @@
 #### search_n()
 - **用途**：查找容器中连续出现指定数量的特定值。
 - **用法**：`auto it = search_n(container.begin(), container.end(), count, value);`
+
+## 排序算法
+### sort()
+- **用途**：使用快速排序算法对序列进行排序，不是稳定的排序算法。
+- **用法**：`sort(container.begin(), container.end());`
+
+### stable_sort()
+- **用途**：稳定的排序算法，相等的元素会保持原有的顺序。
+- **用法**：`stable_sort(container.begin(), container.end());`
+
+### partial_sort()
+- **用途**：部分排序算法，把最小的n个元素移动到容器开始，进行排序。
+- **用法**：`partial_sort(container.begin(), container.begin() + n, container.end());`
+
+### nth_element()
+- **用途**：确保传入参数n之后，所有小于他的元素都在他之前，所有大于他的元素都在他之后，通常用来找第n小的元素。
+- **用法**：`nth_element(container.begin(), container.begin() + i, container.end());`
+
+### 自定义排序
+- **用途**：允许用户自定义排序规则。
+- **用法**：`sort(container.begin(), container.end(), [](int a, int b) { return condition; });`
