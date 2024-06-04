@@ -75,18 +75,4 @@ int main()
   {
     cout << num;
   }
-
-  // sort  排序函数
-  vector<int> v1 = {9, 7, 3, 2, 5, 2, 6, 7};
-  sort(v1.begin(), v1.end());
-  for (auto num : v1)
-  {
-    cout << num;
-  }
-
-  // is_sorted  检查当前集合是否有序
-  vector<int> v1 = {9, 7, 3, 2, 5, 2, 6, 7};
-  bool result = is_sorted(v1.begin(), v1.end());
-
-  cout << "当前集合是否有序" << "  " << result;
 }
