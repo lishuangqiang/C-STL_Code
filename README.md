@@ -148,3 +148,49 @@
 ### copysign()
 - **用途**：复制第二个数的符号给第一个数。
 - **用法**：`double result = std::copysign(x, y);`
+
+## 修改序列算法
+
+### copy()
+- **用途**：复制一个序列到另一个序列。
+- **用法**：`std::copy(source.begin(), source.end(), destination.begin());`
+
+### copy_if()
+- **用途**：复制序列中满足特定条件的元素到另一个序列。
+- **用法**：`std::copy_if(source.begin(), source.end(), std::back_inserter(destination), [](int x) { return condition; });`
+
+### copy_n()
+- **用途**：复制序列中的前n个元素到另一个序列。
+- **用法**：`std::copy_n(source.begin(), n, destination.begin());`
+
+### move()
+- **用途**：移动序列中的元素到另一个序列，避免复制。
+- **用法**：`std::move(source.begin(), source.end(), std::back_inserter(destination));`
+
+### swap()
+- **用途**：交换两个元素或两个序列的元素。
+- **用法**：`std::swap(a, b);` 或 `std::swap(vec1, vec2);`
+
+### iter_swap()
+- **用途**：交换两个迭代器所指向的元素。
+- **用法**：`std::iter_swap(it1, it2);`
+
+### transform()
+- **用途**：对序列中的每个元素应用给定函数，并将结果存储在指定序列中。
+- **用法**：`std::transform(source.begin(), source.end(), destination.begin(), [](int x) { return x * x; });`
+
+### replace()
+- **用途**：替换序列中满足特定值的元素。
+- **用法**：`std::replace(vec.begin(), vec.end(), old_value, new_value);`
+
+### replace_if()
+- **用途**：替换序列中满足特定条件的元素。
+- **用法**：`std::replace_if(vec.begin(), vec.end(), [](int x) { return condition; }, new_value);`
+
+### fill()
+- **用途**：用给定值填充整个序列。
+- **用法**：`std::fill(vec.begin(), vec.end(), value);`
+
+### fill_n()
+- **用途**：用给定值填充序列中的前n个元素。
+- **用法**：`std::fill_n(vec.begin(), n, value);`
